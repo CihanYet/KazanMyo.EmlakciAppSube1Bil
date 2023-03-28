@@ -8,18 +8,19 @@ namespace KazanMyo.EmlakciAppSube1
         {
             int sayi = 5;//Değer tipi(STACK)
             Ev evim = new Ev();//Ev classından yeni bir nesne türettik.
-            evim.alan = 120;//Set
-            evim.odasayisi = 3;
-            evim.katno = 2;
-            evim.semt = "Gazi";
+            evim.Alan = 120;//Set
+            evim.Odasayisi = 3;
+            evim.Katno = 2;
+            evim.Semt = "Gazi";
 
             Ev evim2 = new Ev();
-            evim2.katno = 1;
-            evim2.alan = 100;
-            evim2.odasayisi = 2;
-            evim2.semt = "Gazi";
+            evim2.Katno = 1;
+            evim2.Alan = 100;
+            evim2.Odasayisi = 2;
+            evim2.Semt = "Gazi";
 
             Console.WriteLine(evim2.EvBilgileri());
+
         }
 
 
@@ -27,14 +28,24 @@ namespace KazanMyo.EmlakciAppSube1
 
     class Ev
     {
-        public int odasayisi;//field
-        public string semt;
-        public int katno;
-        public double alan;
+        private int odasayisi;
+
+        public int Odasayisi
+        {
+            get { return odasayisi; }
+            set { odasayisi = value; }
+        }
+
+        public string Semt { get => semt; set => semt = value; }
+        public int Katno { get => katno; set => katno = value; }
+
+        private string semt;
+        private int katno;
+        public double Alan { get; set; }
 
         public string EvBilgileri()
         {
-            return $"Odasayısı:{this.odasayisi}\nAlan:{this.alan}\nSemt:{this.semt}\nKat No:{this.katno}";
+            return $"Odasayısı:{this.odasayisi}\nAlan:{this.Alan}\nSemt:{this.Semt}\nKat No:{this.Katno}";
         }
 
     }
