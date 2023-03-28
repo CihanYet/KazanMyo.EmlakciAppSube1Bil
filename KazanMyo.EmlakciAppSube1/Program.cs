@@ -6,28 +6,37 @@ namespace KazanMyo.EmlakciAppSube1
     {
         static void Main(string[] args)
         {
-            int sayi = 5;//Değer tipi(STACK)
-            Ev evim = new Ev();//Ev classından yeni bir nesne türettik.
-            evim.Alan = 120;//Set
-            evim.Odasayisi = 3;
-            evim.Katno = 2;
-            evim.Semt = "Gazi";
 
-            Ev evim2 = new Ev();
-            evim2.Katno = 1;
-            evim2.Alan = 100;
-            evim2.Odasayisi = 2;
-            evim2.Semt = "Gazi";
+            Ev evim3 = new Ev();
+            Ev evim = new Ev(3, 2, "Gazi", 100);
+            Ev evim2 = new Ev(2, 5, 100);
 
             Console.WriteLine(evim2.EvBilgileri());
-
         }
-
-
     }
 
     class Ev
     {
+        public Ev()
+        {
+
+        }
+        public Ev(int odasayisi, int katno, string semt, double alan)
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Semt = semt;
+            this.Alan = alan;
+        }
+
+        public Ev(int odasayisi, int katno, double alan)
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Semt = "Gazi";
+            this.Alan = alan;
+        }
+
         private int odasayisi;
 
         public int Odasayisi
@@ -55,3 +64,5 @@ namespace KazanMyo.EmlakciAppSube1
 //Private: Sadece tanımlandıkları class içerisinden erişilebilir üyeler
 //Public: Tanımlandıkları class dışından da erişelebilir üyeler.
 //static: Class içinde tanımlanan static üyelerin nesnelerle bir bağlantısı yoktur. Doğrudan class adı ile erişilebilir.
+
+//Constructor-Yapıcı Metod-Kurucu Metod: Her class içerisinde class adı ile aynı ada sahip olan metodlardır. Bu metodların görevi, class'dan nesne türeltildiğinde class içinde bulunan field/property'lere varsayılan değerini atamakdır.
