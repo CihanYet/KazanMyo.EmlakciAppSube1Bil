@@ -2,13 +2,12 @@
 
 namespace KazanMyo.EmlakciLibSube1Bil
 {
-    public class Ev:Object
+    public class Ev : Object
     {
         private static int sayac = 0;
         public Ev()
         {
             sayac++;
-            
         }
         public Ev(int odasayisi, int katno, string semt, double alan)
         {
@@ -43,6 +42,7 @@ namespace KazanMyo.EmlakciLibSube1Bil
         private int katno;
         public double Alan { get; set; }
         public static int Sayac { get => sayac; }
+              
 
         public string EvBilgileri()
         {

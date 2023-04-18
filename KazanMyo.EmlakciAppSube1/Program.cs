@@ -8,20 +8,36 @@ namespace KazanMyo.EmlakciAppSube1
         static void Main(string[] args)
         {
 
-            SatilikEv se=new SatilikEv();
+            var se = new SatilikEv();
             se.Katno = 2;
             se.Alan = 100;
-            se.Semt = "Gazi";
+            se.Semt = "Satilik Ev";
             se.Odasayisi = 4;
             se.Satisfiyat = 1000000;
+           
+            var ke = new KiralikEv();
+            ke.Katno = 3;
+            ke.Kira = 500;
+            ke.Alan = 100;
+            ke.Depozito = 600;
+            ke.Odasayisi = 2;
+            ke.Semt = "Kiralik Ev";
+            Ev[] evler = new Ev[2];
+            evler[0] = se;
+            evler[1] = ke;
+            for (int i = 0; i < evler.Length; i++)
+            {
+                Console.WriteLine(evler[i].EvBilgileri());
+                Console.WriteLine("---------------------");
+            }
 
-                      
+            //Döngü her döndüğünde gelen evin tipine bakılarak ilgili class içindeki EvBilgileri metodunu çağırmaya çalışalım
         }
 
-        
-    } 
-}
 
+    }
+}
+//Name Hiding(İsim Gizleme): Türeyen classta, base class ile aynı isimde tanımlanmış üyelere, türeyen class referansları ile ulaşıldığında artık base classtaki üyelere ulaşılamaz.
 
 
 
