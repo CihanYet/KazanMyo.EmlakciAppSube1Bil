@@ -41,10 +41,9 @@ namespace KazanMyo.EmlakciLibSube1Bil
         private string semt;
         private int katno;
         public double Alan { get; set; }
-        public static int Sayac { get => sayac; }
-              
+        public static int Sayac { get => sayac; }      
 
-        public string EvBilgileri()
+        public virtual string EvBilgileri()
         {
             return $"Odasayısı:{this.odasayisi}\nAlan:{this.Alan}\nSemt:{this.Semt}\nKat No:{this.Katno}";
         }

@@ -9,7 +9,12 @@ namespace KazanMyo.EmlakciLibSube1Bil
         public double Kira { get; set; }
         public double Depozito { get; set; }
 
-        public new string EvBilgileri()
+        //public new string EvBilgileri()
+        //{
+        //    return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
+        //}
+
+        public override string EvBilgileri()
         {
             return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
         }

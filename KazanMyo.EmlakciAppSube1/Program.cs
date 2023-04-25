@@ -8,36 +8,93 @@ namespace KazanMyo.EmlakciAppSube1
         static void Main(string[] args)
         {
 
-            var se = new SatilikEv();
-            se.Katno = 2;
-            se.Alan = 100;
-            se.Semt = "Satilik Ev";
-            se.Odasayisi = 4;
-            se.Satisfiyat = 1000000;
-           
-            var ke = new KiralikEv();
-            ke.Katno = 3;
-            ke.Kira = 500;
-            ke.Alan = 100;
-            ke.Depozito = 600;
-            ke.Odasayisi = 2;
-            ke.Semt = "Kiralik Ev";
-            Ev[] evler = new Ev[2];
-            evler[0] = se;
-            evler[1] = ke;
-            for (int i = 0; i < evler.Length; i++)
-            {
-                Console.WriteLine(evler[i].EvBilgileri());
-                Console.WriteLine("---------------------");
-            }
+            //var se = new SatilikEv();
+            //se.Katno = 2;
+            //se.Alan = 100;
+            //se.Semt = "Satilik Ev";
+            //se.Odasayisi = 4;
+            //se.Satisfiyat = 1000000;           
 
-            //Döngü her döndüğünde gelen evin tipine bakılarak ilgili class içindeki EvBilgileri metodunu çağırmaya çalışalım
+            //var ke = new KiralikEv();
+            //ke.Katno = 3;
+            //ke.Kira = 500;
+            //ke.Alan = 100;
+            //ke.Depozito = 600;
+            //ke.Odasayisi = 2;
+            //ke.Semt = "Kiralik Ev";          
+
+
+            //Ev[] evler = new Ev[2];
+            //evler[0] = se;
+            //evler[1] = ke;
+            //for (int i = 0; i < evler.Length; i++)
+            //{
+            //    if (evler[i] is SatilikEv)
+            //    {
+            //        SatilikEv sev = (SatilikEv)evler[i];
+            //        Console.WriteLine(sev.EvBilgileri());
+            //    }
+            //    else
+            //    {
+            //        KiralikEv kev = (KiralikEv)evler[i];
+            //        Console.WriteLine(kev.EvBilgileri());
+            //    }
+            //    Console.WriteLine("---------------------");
+            //}
+
+            //for (int i = 0; i < evler.Length; i++)
+            //{
+            //    Console.WriteLine(evler[i].EvBilgileri());
+            //    Console.WriteLine("----------------------");
+            //}
+
+            //Animal animal;
+
+            //animal = new Cat();
+            //Console.WriteLine(animal.Sound());
+
+            //animal = new Dog();
+            //Console.WriteLine(animal.Sound());
+
+
+            //Ev evim;
+            //evim = new SatilikEv();
+            //Console.WriteLine(evim.EvBilgileri());
+
+            //evim=new KiralikEv();
+            //Console.WriteLine(evim.EvBilgileri());
+        }
+    }
+
+
+    class Animal
+    {
+        public virtual string Sound()
+        {
+            return "Ses tellerinin titreşimi sağlandı.";
         }
 
+    }
 
+    class Cat:Animal
+    {
+        public override string Sound()
+        {
+            return base.Sound()+"Titreşim sonucunda miyav sesi çıkar.";
+        }
+    }
+
+    class Dog:Animal
+    {
+        public override string Sound()
+        {
+            return base.Sound()+"Titreşim sonucunda hav hav sesi çıkar";
+        }
     }
 }
 //Name Hiding(İsim Gizleme): Türeyen classta, base class ile aynı isimde tanımlanmış üyelere, türeyen class referansları ile ulaşıldığında artık base classtaki üyelere ulaşılamaz.
+
+//Polymorphisim (Çok biçimlilik): Base class'da virtual olarak tanımlanan bir üyenin, türeyen classta ezilerek devreden çıkarılması ve farklı biçimde çalıştırılmasıdır.
 
 
 

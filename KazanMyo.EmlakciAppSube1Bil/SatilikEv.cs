@@ -8,7 +8,12 @@ namespace KazanMyo.EmlakciLibSube1Bil
     {
         public double Satisfiyat { get; set; }
 
-        public new string EvBilgileri()
+        //public new string EvBilgileri()
+        //{
+        //    return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
+        //}
+
+        public override string EvBilgileri()
         {
             return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
         }
@@ -16,3 +21,6 @@ namespace KazanMyo.EmlakciLibSube1Bil
 }
 
 //internal erişim belirleyicisi: Sadece tanımlı olduğu namespace içerisinde kullanılabilir.
+
+//Ev base class
+//SatilikEv Derived class
