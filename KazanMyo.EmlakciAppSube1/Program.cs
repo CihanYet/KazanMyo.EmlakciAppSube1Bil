@@ -8,12 +8,11 @@ namespace KazanMyo.EmlakciAppSube1
         static void Main(string[] args)
         {
 
-            //var se = new SatilikEv();
-            //se.Katno = 2;
-            //se.Alan = 100;
-            //se.Semt = "Satilik Ev";
-            //se.Odasayisi = 4;
-            //se.Satisfiyat = 1000000;           
+            var se = new SatilikEv(4, 2, 100, "Satilik Semt", 100000);
+           
+            Console.WriteLine(se.ToString());
+
+           
 
             //var ke = new KiralikEv();
             //ke.Katno = 3;
@@ -21,7 +20,8 @@ namespace KazanMyo.EmlakciAppSube1
             //ke.Alan = 100;
             //ke.Depozito = 600;
             //ke.Odasayisi = 2;
-            //ke.Semt = "Kiralik Ev";          
+            //ke.Semt = "Kiralik Ev";
+
 
 
             //Ev[] evler = new Ev[2];
@@ -63,6 +63,20 @@ namespace KazanMyo.EmlakciAppSube1
 
             //evim=new KiralikEv();
             //Console.WriteLine(evim.EvBilgileri());
+
+            //Cat cat=new Cat();
+            //Console.WriteLine(cat.Sound());
+
+            //Dog dog = new Dog();
+            //Console.WriteLine(dog.Sound());
+
+            //Animal animal = new Cat();
+            //Console.WriteLine(animal.Sound());
+
+            //animal = new Dog();
+            //Console.WriteLine(animal.Sound());
+
+
         }
     }
 

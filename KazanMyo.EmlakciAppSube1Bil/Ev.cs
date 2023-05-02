@@ -2,8 +2,12 @@
 
 namespace KazanMyo.EmlakciLibSube1Bil
 {
+    //public private protected internal sealed
     public class Ev : Object
     {
+
+        protected int sayi;
+
         private static int sayac = 0;
         public Ev()
         {
@@ -43,7 +47,8 @@ namespace KazanMyo.EmlakciLibSube1Bil
         public double Alan { get; set; }
         public static int Sayac { get => sayac; }      
 
-        public virtual string EvBilgileri()
+       
+        public override string ToString()
         {
             return $"Odasayısı:{this.odasayisi}\nAlan:{this.Alan}\nSemt:{this.Semt}\nKat No:{this.Katno}";
         }

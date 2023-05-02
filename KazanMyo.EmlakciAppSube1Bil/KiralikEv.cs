@@ -4,8 +4,20 @@ using System.Text;
 
 namespace KazanMyo.EmlakciLibSube1Bil
 {
-    public class KiralikEv:Ev
+    public class KiralikEv : Ev
     {
+       
+
+        public KiralikEv()
+        {
+
+        }
+
+        public KiralikEv(int odasayisi, int katno, double alan, string semt, double kira, double depozito) : base(odasayisi, katno, semt, alan)
+        {
+            this.Kira = kira;
+            this.Depozito = depozito;
+        }
         public double Kira { get; set; }
         public double Depozito { get; set; }
 
@@ -14,9 +26,15 @@ namespace KazanMyo.EmlakciLibSube1Bil
         //    return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
         //}
 
-        public override string EvBilgileri()
+        //public string EvBilgileri()
+        //{
+        //    return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
+        //}
+
+
+        public override string ToString()
         {
-            return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
+            return $"{base.ToString()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
         }
     }
 }

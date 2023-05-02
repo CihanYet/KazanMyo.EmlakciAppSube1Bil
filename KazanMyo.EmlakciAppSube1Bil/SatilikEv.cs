@@ -4,8 +4,17 @@ using System.Text;
 
 namespace KazanMyo.EmlakciLibSube1Bil
 {
-    public class SatilikEv:Ev
+    public class SatilikEv : Ev
     {
+        public SatilikEv()
+        {           
+            
+        }
+
+        public SatilikEv(int odasayisi, int katno, double alan, string semt, double satisfiyat) : base(odasayisi, katno, semt, alan)
+        {
+            this.Satisfiyat = satisfiyat;
+        }
         public double Satisfiyat { get; set; }
 
         //public new string EvBilgileri()
@@ -13,9 +22,11 @@ namespace KazanMyo.EmlakciLibSube1Bil
         //    return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
         //}
 
-        public override string EvBilgileri()
+
+
+        public override string ToString()
         {
-            return $"{base.EvBilgileri()}\nSatış Fiyatı:{this.Satisfiyat}";
+            return $"{base.ToString()}\nSatış Fiyatı:{this.Satisfiyat}";
         }
     }
 }
