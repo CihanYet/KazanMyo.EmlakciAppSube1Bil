@@ -7,12 +7,12 @@ namespace KazanMyo.EmlakciLibSube1Bil
     public class SatilikEv : Ev
     {
         public SatilikEv()
-        {           
-            
+        {
+                       
         }
 
         public SatilikEv(int odasayisi, int katno, double alan, string semt, double satisfiyat) : base(odasayisi, katno, semt, alan)
-        {
+        {            
             this.Satisfiyat = satisfiyat;
         }
         public double Satisfiyat { get; set; }

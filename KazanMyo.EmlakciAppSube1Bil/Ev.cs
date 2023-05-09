@@ -5,7 +5,6 @@ namespace KazanMyo.EmlakciLibSube1Bil
     //public private protected internal sealed
     public class Ev : Object
     {
-
         protected int sayi;
 
         private static int sayac = 0;

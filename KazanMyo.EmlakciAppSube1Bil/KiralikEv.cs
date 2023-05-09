@@ -10,7 +10,7 @@ namespace KazanMyo.EmlakciLibSube1Bil
 
         public KiralikEv()
         {
-
+            
         }
 
         public KiralikEv(int odasayisi, int katno, double alan, string semt, double kira, double depozito) : base(odasayisi, katno, semt, alan)

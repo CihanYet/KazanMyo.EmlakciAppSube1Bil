@@ -12,21 +12,20 @@ namespace KazanMyo.EmlakciAppSube1
            
             Console.WriteLine(se.ToString());
 
-           
 
-            //var ke = new KiralikEv();
-            //ke.Katno = 3;
-            //ke.Kira = 500;
-            //ke.Alan = 100;
-            //ke.Depozito = 600;
-            //ke.Odasayisi = 2;
-            //ke.Semt = "Kiralik Ev";
-
+            var ke = new KiralikEv();
+            ke.Katno = 3;
+            ke.Kira = 500;
+            ke.Alan = 100;
+            ke.Depozito = 600;
+            ke.Odasayisi = 2;
+            ke.Semt = "Kiralik Ev";
 
 
-            //Ev[] evler = new Ev[2];
-            //evler[0] = se;
-            //evler[1] = ke;
+
+            Ev[] evler = new Ev[2];
+            evler[0] = se;
+            evler[1] = ke;
             //for (int i = 0; i < evler.Length; i++)
             //{
             //    if (evler[i] is SatilikEv)
