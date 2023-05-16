@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KazanMyo.EmlakciAppSube1", "KazanMyo.EmlakciAppSube1\KazanMyo.EmlakciAppSube1.csproj", "{5825EA5F-79D8-4C2C-81F0-6A2DF7223BA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KazanMyo.EmlakciLibSube1Bil", "KazanMyo.EmlakciAppSube1Bil\KazanMyo.EmlakciLibSube1Bil.csproj", "{6B2A7E2E-75FD-4687-9045-E3F55A46107E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KazanMyo.EmlakciLibSube1Bil", "KazanMyo.EmlakciAppSube1Bil\KazanMyo.EmlakciLibSube1Bil.csproj", "{6B2A7E2E-75FD-4687-9045-E3F55A46107E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KazanMyo.CollectionsAppSube1Bil", "KazanMyo.CollectionsAppSube1Bil\KazanMyo.CollectionsAppSube1Bil.csproj", "{D4AF6D45-FAA2-435A-A10E-6821E3185DA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6B2A7E2E-75FD-4687-9045-E3F55A46107E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B2A7E2E-75FD-4687-9045-E3F55A46107E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B2A7E2E-75FD-4687-9045-E3F55A46107E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AF6D45-FAA2-435A-A10E-6821E3185DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AF6D45-FAA2-435A-A10E-6821E3185DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AF6D45-FAA2-435A-A10E-6821E3185DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AF6D45-FAA2-435A-A10E-6821E3185DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

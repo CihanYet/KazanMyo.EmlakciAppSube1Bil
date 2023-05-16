@@ -1,5 +1,6 @@
 ﻿using KazanMyo.EmlakciLibSube1Bil;
 using System;
+using System.Collections.Generic;
 
 namespace KazanMyo.EmlakciAppSube1
 {
@@ -9,19 +10,25 @@ namespace KazanMyo.EmlakciAppSube1
         {
 
             var se = new SatilikEv(4, 2, 100, "Satilik Semt", 100000);
-           
-            Console.WriteLine(se.ToString());
 
-           
+            var ke = new KiralikEv();
+            ke.Katno = 3;
+            ke.Kira = 500;
+            ke.Alan = 100;
+            ke.Depozito = 600;
+            ke.Odasayisi = 2;
+            ke.Semt = "Kiralik Ev";
 
-            //var ke = new KiralikEv();
-            //ke.Katno = 3;
-            //ke.Kira = 500;
-            //ke.Alan = 100;
-            //ke.Depozito = 600;
-            //ke.Odasayisi = 2;
-            //ke.Semt = "Kiralik Ev";
 
+            List<Ev> lst = new List<Ev>();
+            lst.Add(se);
+            lst.Add(ke);
+
+            foreach (var item in lst)
+            {
+                Console.WriteLine(item.ToString());
+                Console.WriteLine("----------------");
+            }
 
 
             //Ev[] evler = new Ev[2];
