@@ -1,5 +1,6 @@
 ﻿using KazanMyo.EmlakciLibSube1Bil;
 using System;
+using System.IO;
 
 namespace KazanMyo.EmlakciAppSube1
 {
@@ -9,8 +10,7 @@ namespace KazanMyo.EmlakciAppSube1
         {
 
             var se = new SatilikEv(4, 2, 100, "Satilik Semt", 100000);
-           
-            Console.WriteLine(se.ToString());
+
 
 
             var ke = new KiralikEv();
@@ -21,11 +21,56 @@ namespace KazanMyo.EmlakciAppSube1
             ke.Odasayisi = 2;
             ke.Semt = "Kiralik Ev";
 
+            FileStream fs = null;
+            StreamWriter sw = null;
+            try
+            {
+
+                //....
+                FileMode mod;
+                if (File.Exists(@"D:\EvlerSube1.txt"))
+                {
+                    mod = FileMode.Append;
+                }
+                else
+                {
+                    mod = FileMode.CreateNew;
+                }
+
+                using (fs = new FileStream(@"D:\EvlerSube1.txt", mod))
+                {
+                    using (sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(ke.ToString());
+                        fs.Flush();
+                        sw.Close();
+                        fs.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.WriteLine("Bir hata oluştu!");
+            }
+            finally//try içerisinde hata olsa da olmasa da çalışan blok
+            {
+                //if (fs != null && sw != null)//Null Check
+                //{
+                //    // fs.Dispose();
+                //   // sw.Dispose();
+                //}
+            }
 
 
-            Ev[] evler = new Ev[2];
-            evler[0] = se;
-            evler[1] = ke;
+
+
+
+
+
+            //Ev[] evler = new Ev[2];
+            //evler[0] = se;
+            //evler[1] = ke;
             //for (int i = 0; i < evler.Length; i++)
             //{
             //    if (evler[i] is SatilikEv)
@@ -89,19 +134,19 @@ namespace KazanMyo.EmlakciAppSube1
 
     }
 
-    class Cat:Animal
+    class Cat : Animal
     {
         public override string Sound()
         {
-            return base.Sound()+"Titreşim sonucunda miyav sesi çıkar.";
+            return base.Sound() + "Titreşim sonucunda miyav sesi çıkar.";
         }
     }
 
-    class Dog:Animal
+    class Dog : Animal
     {
         public override string Sound()
         {
-            return base.Sound()+"Titreşim sonucunda hav hav sesi çıkar";
+            return base.Sound() + "Titreşim sonucunda hav hav sesi çıkar";
         }
     }
 }

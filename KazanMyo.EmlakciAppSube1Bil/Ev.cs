@@ -51,5 +51,16 @@ namespace KazanMyo.EmlakciLibSube1Bil
         {
             return $"Odasayısı:{this.odasayisi}\nAlan:{this.Alan}\nSemt:{this.Semt}\nKat No:{this.Katno}";
         }
+
+        ~Ev()
+        {
+            //Destructor. 
+            sayac--;
+        }
+        
     }
 }
+
+//Managed Code-Type Safe-Garbage Collector
+//Garbage Collector: Heap bölgesinde bulunan işi biten nesneler bellekten atan yapıdır. Bu sayede bellek yönetimi gerçekleştirilir. Nesnelerin bellekten atılması işlemine Dispose denir.
+//Destructor-Yıkıcı Metod: Garbage collector nesneyi bellekten attığı sırada çalışan metodlardır. Class'larda bulunur ancak struct yapılarında bulunmaz.
